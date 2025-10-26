@@ -9,6 +9,9 @@ on:
       upload-tag:
         type: string
         default: "nightly"
+    secrets:
+      GH_PAT:
+        required: false
 
 # NOTE: F-Droid builder script 'flutter/build_fdroid.sh' reads environment
 # variables from this workflow!
@@ -53,6 +56,7 @@ jobs:
 
   build-RustDeskTempTopMostWindow:
     uses: ./.github/workflows/third-party-RustDeskTempTopMostWindow.yml
+    secrets: inherit
     with:
       upload-artifact: ${{ inputs.upload-artifact }}
       target: windows-2022
