@@ -4,6 +4,9 @@ name: Build flutter-rust-bridge
 
 on:
   workflow_call:
+    secrets:
+      GH_PAT:
+        required: true
 
 env:
   CARGO_EXPAND_VERSION: "1.0.95"
