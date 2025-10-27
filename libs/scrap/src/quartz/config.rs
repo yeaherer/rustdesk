@@ -67,7 +67,6 @@ impl Default for Config {
     fn default() -> Config {
         Config {
             cursor: false,
-            allow_hide_cm: true,
             letterbox: true,
             throttle: 0.0,
             queue_length: 3,
