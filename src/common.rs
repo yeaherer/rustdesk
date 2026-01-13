@@ -910,6 +910,7 @@ pub fn check_software_update() {
 
 #[tokio::main(flavor = "current_thread")]
 pub async fn do_check_software_update() -> hbb_common::ResultType<()> {
+    return Ok(());
     let (request, url) =
         hbb_common::version_check_request(hbb_common::VER_TYPE_RUSTDESK_CLIENT.to_string());
     let latest_release_response = create_http_client_async()
